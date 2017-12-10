@@ -2,6 +2,7 @@ package mypackage.CXF;
 
 import mypackage.CXF.IServices.NetbarServices;
 import mypackage.CXF.interceptor.AuthInterceptor;
+import mypackage.CXF.interceptor.AuthInterceptor02;
 import org.apache.cxf.Bus;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;

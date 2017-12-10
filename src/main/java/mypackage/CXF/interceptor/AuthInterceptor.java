@@ -90,13 +90,13 @@ public class AuthInterceptor extends AbstractPhaseInterceptor<SoapMessage>{
 
         NodeList passwords = head.getElementsByTagName("password");
 
-        if (users.getLength() < 1) {
+        if (null==users||users.getLength() < 1) {
 
             throw new Fault(new IllegalArgumentException("找不到用户信息"));
 
         }
 
-        if (passwords.getLength() < 1) {
+        if (null==passwords||passwords.getLength() < 1) {
 
             throw new Fault(new IllegalArgumentException("找不到密码信息"));
 

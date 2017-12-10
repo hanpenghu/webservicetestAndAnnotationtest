@@ -30,7 +30,7 @@ public class NetbarServices_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8070/services/hanhan?wsdl");
+            url = new URL("http://localhost:8070/hanhan/hanhan02?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

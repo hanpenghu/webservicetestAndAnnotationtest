@@ -1,8 +1,16 @@
 package utils;
 
-public class P {
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class p {
     private String ads="";
     private StringBuffer sb=new StringBuffer();
+    private List lin=new LinkedList();
+    private List arl=new ArrayList();
     /**
      ****************************************************************************************
      * */
@@ -19,11 +27,16 @@ public class P {
      * 调用该方法链式增加字符串
      * 然后调用gad()得到结果
      * */
-    public P sad(String str) {
+    public p sad(String str) {
         ads=sb.append(str).toString();
         return this;
     }
 
+    @Test
+    public void g(){
+        String gad = p.gp().sad("韩寒").sad("梦如").gad();
+        p.p(gad);//韩寒梦如
+    }
     /**
      ****************************************************************************************
      * */
@@ -31,8 +44,8 @@ public class P {
      *生成新类new封装
      * */
 
-      public static P gp(){
-          return new P();
+      public static p gp(){
+          return new p();
       }
 
 
@@ -46,16 +59,45 @@ public class P {
 
     /**
      ****************************************************************************************
+     * 生成linkedlist并装上东西
      * */
+    public List getLin() {
+        return lin;
+    }
 
+    public p setLin(Object o) {
+        this.lin.add(o);
+        return this;
+    }
+
+    @Test
+    public void f(){
+        List lin = p.gp().setLin(1).setLin(2).setLin(3).getLin();
+        p.p(lin);//[1,2,3]
+    }
+    /**
+     ****************************************************************************************
+     * 生成arraylist并装上东西
+     * */
+    public List getArl() {
+        return arl;
+    }
+
+    public p setArl(Object o) {
+        this.arl.add(o);
+        return this;
+    }
+    @Test
+    public void f1(){
+        List arl = p.gp().setArl(11).setArl(22).setArl(33).getArl();
+        p.p(arl);////[11,22,33]
+
+    }
     /**
      ****************************************************************************************
      * */
 
-    public static void main(String[]args){
-        String addStr = P.gp().sad("年后").sad("你好！").sad("失落的房间").gad();
-        P.p(addStr);
-    }
+
     /**
      ****************************************************************************************
      * */
