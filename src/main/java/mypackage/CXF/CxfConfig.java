@@ -20,9 +20,15 @@ public class CxfConfig {
     private NetbarServices netbarServices;
 
     @Bean
-    public Endpoint endpoint() {
+    public Endpoint endpoint01() {
         EndpointImpl endpoint = new EndpointImpl(bus,netbarServices);
-        endpoint.publish("/hanhan");//接口发布在 /hanhan 目录下
+        endpoint.publish("/hanhan01");//接口发布在 /hanhan 目录下
+        return endpoint;
+    }
+    @Bean
+    public Endpoint endpoint02() {
+        EndpointImpl endpoint = new EndpointImpl(bus,netbarServices);
+        endpoint.publish("/hanhan02");//接口发布在 /hanhan 目录下
         return endpoint;
     }
 }
