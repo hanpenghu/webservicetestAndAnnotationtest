@@ -13,7 +13,7 @@ public class TestOfClient {
     public void f1(){
         try {
             // 接口地址
-            String address = "http://localhost:8070/services/hanhan01?wsdl";
+            String address = "http://localhost:8070/hanhan/hanhan01?wsdl";
             // 代理工厂
             JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
             // 设置代理地址
@@ -38,10 +38,9 @@ public class TestOfClient {
     public void f2(){
         // 创建动态客户端
         JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
-        Client client = dcf.createClient("http://localhost:8070/services/hanhan02?wsdl");
+        Client client = dcf.createClient("http://localhost:8070/hanhan/hanhan02?wsdl");
         // 需要密码的情况需要加上用户名和密码
-        // client.getOutInterceptors().add(new ClientLoginInterceptor(USER_NAME,
-        // PASS_WORD));
+         client.getOutInterceptors().add(new ClientLoginInterceptor("admin","123"));
         Object[] objects = new Object[0];
         try {
             // invoke("方法名",参数1,参数2,参数3....);
