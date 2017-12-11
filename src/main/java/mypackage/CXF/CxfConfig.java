@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.xml.ws.Endpoint;
 /**
- *http://localhost:8070/services/hanhan?wsdl
+ *http://localhost:8070/hanhan/hanhan01?wsdl
  * 为访问接口
  * */
 @Configuration

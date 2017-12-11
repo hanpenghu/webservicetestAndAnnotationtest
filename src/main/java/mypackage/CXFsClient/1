@@ -1,0 +1,5 @@
+the java text under this text,
+Is the auto generate by sentence
+
+wsimport -s ./ -p CXFsClient http://localhost:8070/hanhan/hanhan01?wsdl
+
