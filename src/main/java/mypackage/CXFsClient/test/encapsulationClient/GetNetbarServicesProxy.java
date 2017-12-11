@@ -8,6 +8,7 @@ import mypackage.CXFsClient.NetbarServices;
 import mypackage.CXF.variable.VariableFromApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import utils.p;
 
 import org.springframework.stereotype.Component;
@@ -35,7 +36,7 @@ public class GetNetbarServicesProxy {//类开始地方
                .getServiceObj();
    }
 
-//    @Scheduled(fixedDelay = 12*1000)
+    @Scheduled(fixedDelay = 12*1000)
 //    @Test
     public void  g(){
 
