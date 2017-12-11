@@ -8,12 +8,9 @@ import mypackage.CXFsClient.NetbarServices;
 import mypackage.CXF.variable.VariableFromApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
-import org.springframework.scheduling.annotation.Scheduled;
 import utils.p;
 
 import org.springframework.stereotype.Component;
-import utils.GetJaxWsProxyFactoryBean;
 
 import javax.annotation.PostConstruct;
 

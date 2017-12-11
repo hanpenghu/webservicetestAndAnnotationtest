@@ -1,4 +1,4 @@
-package utils;
+package mypackage.CXFsClient.test.encapsulationClient;
 import mypackage.CXFsClient.test.AuthorityHeaderInterceptor;
 import mypackage.CXFsClient.test.AuthorityParameter;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
