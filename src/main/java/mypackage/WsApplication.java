@@ -11,10 +11,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * */
 @EnableScheduling
 @SpringBootApplication
-public class WebservicetestApplication {
+public class WsApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(WebservicetestApplication.class, args);
+		SpringApplication.run(WsApplication.class, args);
 	}
 }
