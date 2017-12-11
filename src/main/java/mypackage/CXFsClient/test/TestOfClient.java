@@ -1,12 +1,11 @@
 package mypackage.CXFsClient.test;
 
-import mypackage.CXF.IServices.NetbarServices;
-import mypackage.CXFsClient.NetbarServices_Service;
+//注意,生成的客户端有些不必要的注解自己试着要删掉,否则运行不成功
+import mypackage.CXFsClient.NetbarServices;
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 import org.junit.jupiter.api.Test;
-
 public class TestOfClient {
 
     /**
@@ -22,11 +21,9 @@ public class TestOfClient {
             AuthorityParameter param = new AuthorityParameter
                     ("username", "admin",
                             "password", "123");
-
-//            jaxWsProxyFactoryBean.getInInterceptors()
-//                    .add(new AuthorityHeaderInterceptor(param));
             jaxWsProxyFactoryBean.getOutInterceptors().add(new AuthorityHeaderInterceptor(param));
-//            jaxWsProxyFactoryBean.getInInterceptors()
+          //上面和下面选一种就行了,只不过是拦截器客户端写的不一样而已
+//            jaxWsProxyFactoryBean.getOutInterceptors()
 //                    .add(new ClientLoginInterceptor("admin","123"));
 
             // 设置接口类型

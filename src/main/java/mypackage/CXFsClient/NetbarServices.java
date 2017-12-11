@@ -17,9 +17,9 @@ import javax.xml.ws.ResponseWrapper;
  * 
  */
 @WebService(name = "NetbarServices", targetNamespace = "http://service.netbar.temple.xiaojf.cn")
-@XmlSeeAlso({
-    ObjectFactory.class
-})
+//@XmlSeeAlso({
+//    ObjectFactory.class
+//})
 public interface NetbarServices {
 
 
@@ -30,11 +30,15 @@ public interface NetbarServices {
      *     returns java.lang.String
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sayHello", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "CXFsClient.SayHello")
-    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "CXFsClient.SayHelloResponse")
+//    @WebResult(targetNamespace = "http://service.netbar.temple.xiaojf.cn")
+//    @RequestWrapper(localName = "sayHello", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "CXFsClient.SayHello")
+//    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "CXFsClient.SayHelloResponse")
+        @RequestWrapper(localName = "sayHello", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "NetbarServices")
+    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://service.netbar.temple.xiaojf.cn", className = "NetbarServices")
     public String sayHello(
-        @WebParam(name = "userName", targetNamespace = "")
+        @WebParam(name = "userName"
+//                , targetNamespace = "http://service.netbar.temple.xiaojf.cn"
+            )
         String userName);
 
 }
